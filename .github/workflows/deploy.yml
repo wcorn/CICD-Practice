@@ -8,7 +8,6 @@ env:
   DOCKER_IMAGE: ghcr.io/${{ github.actor }}/clonecoding
   VERSION: ${{ github.sha }}
   NAME: go_cicd
-  CI: ""
 
 jobs:
   build:
@@ -42,7 +41,5 @@ jobs:
           docker push ${{ env.DOCKER_IMAGE }}
       - name: Docker run
         run: |
-          docker pull ${{ env.DOCKER_IMAGE }}:latest
-          docker stop ${{ env.NAME }}
+          docker stop ${{ env.NAME }} && docker rm ${{ env.NAME }} && docker rmi ${{ env.DOCKER_IMAGE }}:latest
           docker run -d -p 9000:9000 --name go_cicd --restart always ${{ env.DOCKER_IMAGE }}:latest
-          docker image prune -f
