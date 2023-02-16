@@ -32,6 +32,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR }}
+      - name: Build with Gradle
+        run: ./gradlew bootJar
       - name: web docker build and push
         run: |
           docker build -t ${{ env.DOCKER_IMAGE }} .
