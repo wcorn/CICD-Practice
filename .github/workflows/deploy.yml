@@ -41,7 +41,7 @@ jobs:
           docker push ${{ env.DOCKER_IMAGE }}
       - name: Docker run
         run: |
-          docker pull ${{ env.DOCKER_IMAGE }}
+          docker pull ${{ env.DOCKER_IMAGE }}:latest
           docker stop ${{ env.NAME }}
           docker run --name=${{ env.NAME }} -d --rm -p 9000:9000 -e ${{ env.DOCKER_IMAGE }}:latest
           docker image prune -f
