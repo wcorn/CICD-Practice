@@ -37,7 +37,6 @@ dependencies {
     // Web
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-
 }
 
 tasks.named('test') {
