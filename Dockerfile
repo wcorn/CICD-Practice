@@ -1,5 +1,4 @@
-FROM openjdk:11
-ARG JAR_FILE=build/libs/*.jar
-COPY ${JAR_FILE} app.jar
+FROM openjdk:11-jre-slim
+COPY build/libs/*.jar app.jar
 EXPOSE 9000
-ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar /app.jar"]
+ENTRYPOINT ["java","-jar","/app.jar"]
