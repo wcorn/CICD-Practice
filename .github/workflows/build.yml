@@ -5,9 +5,9 @@ on:
     branches: [ develop ]
 
 env:
-  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/CICD
+  DOCKER_IMAGE: ghcr.io/${{ github.actor }}/label-go
   VERSION: ${{ github.sha }}
-  NAME: CICD
+  NAME: label-go
 
 jobs:
   build:
@@ -46,7 +46,7 @@ jobs:
   deploy:
     needs: build
     name: Deploy
-    runs-on: [ self-hosted, label-CICD ]
+    runs-on: [ self-hosted, label-go ]
     steps:
       - name: Login to ghcr
         uses: docker/login-action@v1
@@ -58,4 +58,4 @@ jobs:
       - name: Docker run
         run: |
           docker stop ${{ env.NAME }} && docker rm ${{ env.NAME }} && docekr rmi ${{ env.DOCKER_IMAGE }}:latest
-          docker run -d -p 9000:9000 --name CICD --restart always ${{ env.DOCKER_IMAGE }}:latest
+          docker run -d -p 9000:9000 --name label-go --restart always ${{ env.DOCKER_IMAGE }}:latest
