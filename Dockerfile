@@ -1,4 +1,5 @@
 FROM openjdk:11
-COPY build/libs/*.jar app.jar
+ARG JAR_FILE=build/libs/*.jar
+COPY ${JAR_FILE} app.jar
 EXPOSE 9000
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar /app.jar"]
