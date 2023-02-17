@@ -29,6 +29,7 @@ jobs:
       - name: Cache docker layers
         uses: actions/cache@v2
         with:
+          version: v0.7.0
           path: /tmp/.buildx-cache
           key: ${{ runner.os }}-buildx-${{ env.VERSION }} # runner 설정에서 읽어들일거에요.
           restore-keys: |
