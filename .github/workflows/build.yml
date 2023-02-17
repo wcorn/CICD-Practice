@@ -30,13 +30,13 @@ jobs:
             execSync(`docker push docker.pkg.github.com/${{ github.repository }}/my-image:${version}`);
 
       - name: Download Docker image
-        uses: docker://docker.pkg.github.com/${{ github.repository }}/my-image:${{ github.sha }}
+        uses: docker://docker.pkg.github.com/clonecoding/my-image:${{ github.sha }}
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR }}
 
       - name: Deploy Docker image
-        uses: docker://docker.pkg.github.com/${{ github.repository }}/my-image:${{ github.sha }}
+        uses: docker://docker.pkg.github.com/clonecoding/my-image:${{ github.sha }}
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR }}
