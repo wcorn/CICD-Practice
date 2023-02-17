@@ -40,6 +40,3 @@ jobs:
         with:
           username: ${{ github.actor }}
           password: ${{ secrets.GHCR }}
-        env:
-          ENVIRONMENT_VARIABLE_1: value1
-          ENVIRONMENT_VARIABLE_2: value2
