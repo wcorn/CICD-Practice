@@ -14,6 +14,6 @@ public class TestController {
     @GetMapping("/test")
     public String greeting() {
         String name = testService.getName(1L);
-        return name;
+        return name+"음하하 내가 최고묘!!!!!!!!!";
     }
 }
