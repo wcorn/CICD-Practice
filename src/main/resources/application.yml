@@ -1,2 +1,24 @@
 server:
   port: 9000
+spring:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: Asia/Seoul
+    open-in-view: false
+  application:
+    name: demo
+  datasource:
+    url: ENC(6eHcG/tZrIjdemfERb6BKR3FH13EP4B6We/k5n69agm6dJ0IPySwg1exOYPCx2N36wezqDUynhpeOQYpjUa+6KGn4+jBe3zdcMZgZv4CUl5Ze8o2GL9aexsCD1EbvUPKlN/05GTn/GzOgm9+bSoYNsru0cW30gCdxR82OLlJWXk2gSpU/hrkWg==)
+    username: ENC(KMCnfqM9AhBuzCvOxrmJ3g==)
+    password: ENC(ePcEyjdQNShVY9HQY2phgklPtGXfewpNjeWhV70oRmo=)
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  sql:
+    init:
+      platform: mysql
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
