@@ -12,7 +12,7 @@ spring:
   application:
     name: demo
   datasource:
-    url: ENC(6eHcG/tZrIjdemfERb6BKR3FH13EP4B6We/k5n69agm6dJ0IPySwg1exOYPCx2N36wezqDUynhpeOQYpjUa+6KGn4+jBe3zdcMZgZv4CUl5Ze8o2GL9aexsCD1EbvUPKlN/05GTn/GzOgm9+bSoYNsru0cW30gCdxR82OLlJWXk2gSpU/hrkWg==)
+    url: ENC(R9jKtH9D6ZW8HhNAq/8d+saaMOLWoE+RpchAKCqS+CT8/yJNvY06OKI0iP50ErUENG7Wdz6UF9eCZ0uJKPIaefqcOyhzPmKubXC9kQviGS6vo+opoFfhfF0nRNDU71tMOP7pVcSCMOymCo16vxMDMQ0WZzRa5oJBMuiIuuXJ7OnxlIhjib6qWA==)
     username: ENC(KMCnfqM9AhBuzCvOxrmJ3g==)
     password: ENC(ePcEyjdQNShVY9HQY2phgklPtGXfewpNjeWhV70oRmo=)
     driver-class-name: com.mysql.cj.jdbc.Driver

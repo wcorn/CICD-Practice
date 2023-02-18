@@ -10,10 +10,10 @@ class AppConfigTest extends JasyptConfig {
 
     @Test
     public void jasypt_encrypt_decrypt_test() {
-        String plainText = "plainTest";
+        String plainText = "jdbc:mysql://peter.chd0zpcvgayq.ap-northeast-2.rds.amazonaws.com/test?serverTimeZone=Asia/Seoul&useLegacyDatetimeCode=false";
 
         StandardPBEStringEncryptor jasypt = new StandardPBEStringEncryptor();
-        jasypt.setPassword("Password");
+        jasypt.setPassword("4-BMYJyUU^zsx8");
 
         String encryptedText = jasypt.encrypt(plainText);
         String decryptedText = jasypt.decrypt(encryptedText);
